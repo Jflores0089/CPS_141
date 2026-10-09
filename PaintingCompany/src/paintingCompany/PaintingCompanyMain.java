@@ -20,7 +20,18 @@ public class PaintingCompanyMain {
 	public static void main(String[] args) {
 		
 		//Scanner is used to take input from user and store it into a variable.
-		Scanner keyboard = new Scanner(System.in);
+				Scanner keyboard = new Scanner(System.in);
+		
+		// Entry prompts to user introducing the company and our offers
+		System.out.println("Welcome to the Java Painting Company!");
+		System.out.println("We have three types of paint. Ok, Better, and Great.");
+		System.out.println("What type of paint would you like? \nPlease type: 'O' for Ok paint, "
+				+ 		   "'B' for Better paint and 'G' for great paint.");
+		
+		// Variable that will store users choice of paint.
+		char userPaintChoice = keyboard.next().charAt(0);
+		
+		if (userPaintChoice = o)
 		
 		// Variables where we will store user data.
 		double height = keyboard.nextDouble();
@@ -28,10 +39,13 @@ public class PaintingCompanyMain {
 		double width = keyboard.nextDouble();
 		
 		// Calculating perimeter which is needed for wall square foot total.
-		double perimeter = length + length + width + width;
+		double perimeter = (length + width) * 2 ;
 		
 		//
 		double totalSquareFt = perimeter * height;
+		
+		// Standard exit
+		System.out.println("/nExiting...");
 		
 		
 		

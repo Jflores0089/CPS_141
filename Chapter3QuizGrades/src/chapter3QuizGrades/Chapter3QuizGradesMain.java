@@ -37,6 +37,8 @@ public class Chapter3QuizGradesMain {
 					
 		}	
 		
+		keyboard.close();
+		
 		//Standard exit
 		System.out.println("\nExiting...");
 	}
