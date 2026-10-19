@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * This program calculates the price with tax for the users choice of paint and size.
- * @author javierflores
+ * @author Javier_Flores
  * Status: Working
  */
 
@@ -42,28 +42,27 @@ public class PaintingCompanyMain {
 		System.out.println("We have three types of paint: Ok, Better, and Great.\n");
 		
 		// Listing prices to user
-		System.out.println("The prices for paint are:\n\n$3.50/sqft for ok paint"
-						   			  			  + "\n$5.00/sqft for better paint"
-						   			  			  + "\n$100.00/sqft for great paint");
+		System.out.println("The prices for paint are:\n\n$3.50/sqft for Ok paint"
+						   			  			  + "\n$5.00/sqft for Better paint"
+						   			  			  + "\n$100.00/sqft for Great paint");
 		
 		// Asking user for name
-		System.out.println("\nFirst, what is your name?");
+		System.out.print("\nFirst, what is your name?");
+		
+		// Variable used to store user name
 		String userName = keyboard.nextLine();
 		
-		// Used to create white space between lines
-		System.out.println();
-		
 		// Getting the user ready to input values
-		System.out.printf("Hello %s! Lets get started! We will start with some measurements.\n",userName);
+		System.out.printf("\nHello %s! Lets get started! We will start with some measurements.\n",userName);
 		
 		// Variables where we will store user data.
-		System.out.println("\nWhat is the height?");
+		System.out.print("\nWhat is the height? ");
 		double height = keyboard.nextDouble();
 		
-		System.out.println("What is the length?");
+		System.out.print("\nWhat is the length? ");
 		double length = keyboard.nextDouble(); 
 		
-		System.out.println("What is the width?");
+		System.out.print("\nWhat is the width? ");
 		double width = keyboard.nextDouble();
 		
 		// Calculating perimeter which is needed for wall square foot total.
@@ -76,8 +75,8 @@ public class PaintingCompanyMain {
 		while (isValid == true) {
 		
 		// Prompting user for choice of paint
-		System.out.println("What type of paint would you like?\n\nPlease type: 'O' for ok paint, "
-				+ 		   "'B' for better paint and 'G' for great paint.");
+		System.out.println("\nWhat type of paint would you like?\n\nPlease type: 'O' for ok paint, "
+				         + "'B' for better paint and 'G' for great paint.");
 		
 		// Variable that will store users choice of paint
 		 userPaintChoice = keyboard.next().toUpperCase().charAt(0);
@@ -103,12 +102,15 @@ public class PaintingCompanyMain {
 		
 		// Calculating tax on user selection and storing total price with tax included					
 		totalPrice = paintPrice * totalSquareFt;
+		
 		taxOnTotal = totalPrice * TAXRATE;
+		
 		totalPrice += taxOnTotal;
 		
-		// Showing the user what they have input
-		System.out.printf("Your measurements are:\n\nHeight = %.2f\nLength = %.2f\nWidth  = %.2f\n\n"
-						+ "And your choice of paint was '%c'.\n",height,length,width,userPaintChoice);
+		// Showing the user what they have input and total sqft
+		System.out.printf("\nYour measurements are:\n\nHeight = %.2f\nLength = %.2f\nWidth  = %.2f\n\n"
+				+ "Your total sqft is: %.2f\n\n"		
+				+ "Your choice of paint is: '%c'\n",height,length,width,totalSquareFt,userPaintChoice);
 		
 		// Telling the user the tax rate
 		System.out.printf("\nThe tax rate is: %.2f%%",TAXRATE * 100);
@@ -117,10 +119,13 @@ public class PaintingCompanyMain {
 		System.out.printf("\nYour total before tax: $%,.2f", paintPrice * totalSquareFt);
 		
 		// Telling user total after tax
-		System.out.printf("\nYour total after tax:  $%,.2f\n",totalPrice);
+		System.out.printf("\nYour total after  tax: $%,.2f\n",totalPrice);
 		
 		// Final parting statement
 		System.out.println("\nThanks for choosing the Java Painting Company!");
+		
+		// Closing scanner
+		keyboard.close();
 		
 		// Standard exit
 		System.out.println("\nExiting...");
