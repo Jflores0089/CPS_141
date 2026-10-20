@@ -107,6 +107,11 @@ public class PaintingCompanyMain {
 		
 		totalPrice += taxOnTotal;
 		
+		// For loop used to add stylistic line separation
+		for (int i = 0; i < 40; ++i) {
+			System.out.print("~*~");
+		}
+		
 		// Showing the user what they have input and total sqft
 		System.out.printf("\nYour measurements are:\n\nHeight = %.2f\nLength = %.2f\nWidth  = %.2f\n\n"
 				+ "Your total sqft is: %.2f\n\n"		
@@ -124,11 +129,16 @@ public class PaintingCompanyMain {
 		// Final parting statement
 		System.out.println("\nThanks for choosing the Java Painting Company!");
 		
+		// For loop used to add stylistic line separation
+		for (int i = 0; i < 40; ++i) {
+			System.out.print("~*~");
+		}
+		
 		// Closing scanner
 		keyboard.close();
 		
 		// Standard exit
-		System.out.println("\nExiting...");
+		System.out.println("\n\nExiting...");
 	}
 
 }
