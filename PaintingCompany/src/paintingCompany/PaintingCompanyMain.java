@@ -3,7 +3,7 @@ package paintingCompany;
 import java.util.Scanner;
 
 /**
- * This program calculates the price with tax for the users choice of paint and size.
+ * This program calculates the price with tax for the users choice of paint and measurements.
  * @author Javier_Flores
  * Status: Working
  */
