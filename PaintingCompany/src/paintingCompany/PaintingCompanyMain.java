@@ -108,7 +108,7 @@ public class PaintingCompanyMain {
 		totalPrice += taxOnTotal;
 		
 		// For loop used to add stylistic line separation
-		for (int i = 0; i < 40; ++i) {
+		for (int i = 0; i < 17; ++i) {
 			System.out.print("~*~");
 		}
 		
@@ -130,7 +130,7 @@ public class PaintingCompanyMain {
 		System.out.println("\nThanks for choosing the Java Painting Company!");
 		
 		// For loop used to add stylistic line separation
-		for (int i = 0; i < 40; ++i) {
+		for (int i = 0; i < 17; ++i) {
 			System.out.print("~*~");
 		}
 		
