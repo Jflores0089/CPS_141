@@ -75,11 +75,14 @@ public class PaintingCompanyMain {
 		while (isValid == true) {
 		
 		// Prompting user for choice of paint
-		System.out.println("\nWhat type of paint would you like?\n\nPlease type: 'O' for ok paint, "
-				         + "'B' for better paint and 'G' for great paint.");
+		System.out.print("\nWhat type of paint would you like?\n\nPlease type: 'O' for ok paint, "
+				         + "'B' for better paint and 'G' for great paint. ");
 		
 		// Variable that will store users choice of paint
 		 userPaintChoice = keyboard.next().toUpperCase().charAt(0);
+		
+		//Used to make whitespace 
+		System.out.println();
 		
 		// Storing paint price based on user selection
 				if (userPaintChoice == 'O') {
